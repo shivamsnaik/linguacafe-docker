@@ -13,6 +13,8 @@ RUN pip install -U --no-cache-dir \
         setuptools \
         wheel \
         lxml[html_clean] \
+# package to help build image for arm64
+	gcc-aarch64-linux-gnu \
 #youtube api
         youtube_transcript_api \
 #ebook library
@@ -29,6 +31,8 @@ RUN pip install -U --no-cache-dir \
         pysub-parser \
 #website text parser
         newspaper3k
+# Aarch64 build package: To build the packages for arm64
+	gcc-aarch64-linux-gnu
 
 RUN python3 -m spacy download de_core_news_sm \
     && python3 -m spacy download nb_core_news_sm \
