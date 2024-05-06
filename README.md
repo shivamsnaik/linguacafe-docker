@@ -63,6 +63,13 @@ chmod -R 777 ./ && docker compose up -d
 ## Troubleshooting
 Check the Wiki Page for troubleshooting issues.
 
+## Updating to the latest version 
+
+Always check this section and the update's release notes before updating, any important changes will be here.
+
+Please **backup** linguacafe before updating, otherwise you can lose your data if anything goes wrong. You can read more about backups in the [user manual](https://simjanos-dev.github.io/LinguaCafeHome/#user-manual)
+
+If you are below v0.5.2, please use the migration guide provided [here](/migration.md) instead of this command.
 #### v0.9 Mac changes
 
 If you are a Mac user with Apple silicon, and you had to uncomment a line in the `docker-compose.yml` file before, please follow these instructions before you update:
