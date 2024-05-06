@@ -17,9 +17,7 @@ services:
     webserver:
         container_name: linguacafe-webserver
         restart: unless-stopped
-        build:
-          context: .
-          dockerfile: docker/PhpDockerfile
+        image: ghcr.io/shivamsnaik/linguacafe-webserver:latest
         depends_on:
             - mysql
         volumes:
