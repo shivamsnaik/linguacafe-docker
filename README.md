@@ -61,15 +61,7 @@ chmod -R 777 ./ && docker compose up -d
 ```
 
 ## Troubleshooting
-1. If you face the error **Warning: require(/var/www/html/vendor/autoload.php): Failed to open stream: No such file or directory**:  
-   ```rm -rf vendor composer.lock && composer install```
-## Updating to the latest version 
-
-Always check this section and the update's release notes before updating, any important changes will be here.
-
-Please **backup** linguacafe before updating, otherwise you can lose your data if anything goes wrong. You can read more about backups in the [user manual](https://simjanos-dev.github.io/LinguaCafeHome/#user-manual)
-
-If you are below v0.5.2, please use the migration guide provided [here](/migration.md) instead of this command.
+Check the Wiki Page for troubleshooting issues.
 
 #### v0.9 Mac changes
 
