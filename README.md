@@ -42,19 +42,17 @@ Step 2: Run the following commands from the location where you want to store you
 
 ##### Linux and MacOs:
 ```
-git clone -b deploy https://github.com/simjanos-dev/LinguaCafe.git linguacafe && cd linguacafe
+git clone https://github.com/simjanos-dev/linguacafe-docker.git linguacafe-docker && cd linguacafe-docker
 ```
 
 If you want to change the default MySQL database and user, you can create a `.env` file and add these lines to it before starting your servers for the first time:
 ```
-DB_DATABASE="linguacafe"
-DB_USERNAME="linguacafe"
-DB_PASSWORD="linguacafe"
-```
+LINGUACAFE_DB="linguacafe"
+LINGUACAFE_ROOT="linguacafe"
+LINGUACAFE_PASSWORD="linguacafe"
+LINUACAFE_ROOT_PASSWORD="linguacafe"
 
-MacOs users with Apple silicon must also create a `.env` file, and add the following line:
-```
-PLATFORM="linux/amd64"
+NOTE: You can modify the credentials as you wish. These are just the default values.
 ```
 
 Run the remaining commands:
@@ -62,21 +60,9 @@ Run the remaining commands:
 chmod -R 777 ./ && docker compose up -d
 ```
 
-##### Windows:
-Windows install commands are the same, except it does not need permission changes:
-
-```
-git clone -b deploy https://github.com/simjanos-dev/LinguaCafe.git linguacafe 
-cd linguacafe
-docker compose up -d
-```
-
-Alternatively, for Windows, you can download [this installation script](/install_linguacafe.bat) and run it instead of running the commands yourself. Since this is a .bat file, Windows defender will warn you about it being potentially a malware.
-
-Your server now should be running and accessible on http://localhost:9191. 
-
-Step 3: Follow the instructions on this page in the `Importing dictionaries` section below to import dictionaries that you want to use.
-
+## Troubleshooting
+1. If you face the error **Warning: require(/var/www/html/vendor/autoload.php): Failed to open stream: No such file or directory**:  
+   ```rm -rf vendor composer.lock && composer install```
 ## Updating to the latest version 
 
 Always check this section and the update's release notes before updating, any important changes will be here.
